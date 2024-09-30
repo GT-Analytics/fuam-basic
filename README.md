@@ -14,8 +14,7 @@ Today monitoring for Fabric can be done through different reports, apps and tool
 Additionally it is possible to use different external tools to extract even more information on a more fine granular level with e.g. Vertipaq Analyzer or Data Studio Query Trace.
 On top of that [Power BI](https://learn.microsoft.com/en-us/rest/api/power-bi/) and [Fabric](https://learn.microsoft.com/en-us/rest/api/fabric/articles/) provide a lot of different APIs, which allow you to extract various data from your tenant.
 
-![image](https://github.com/user-attachments/assets/d2d732d5-b221-4a7e-957d-05b19a776ed8)
-
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam-current-overview.png)
 
 FUAM has the goal to provide a more holistic view on top of the various information, which can be extracted from Fabric, allowing it's users to analyze at a very high level, but also to deep dive into specific artifacts for a more fine granular data analysis.
 
@@ -67,7 +66,7 @@ Add the service principal to a group enabled for the following two admin setting
 
 
 The following steps are also shown in the following video:
-[![image](https://github.com/user-attachments/assets/80d11e74-2e2a-4f08-bc1b-ef8f250735ba)](https://youtu.be/H9YHHubOaGM)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_video_cover.png)
 
 
 ### 3. Create Connections
@@ -90,7 +89,8 @@ Write down the Connection IDs for later usage.
 - Create a new Lakehouse called "FUAM_Config_Lakehouse"
 - Within the files section, create a subfolder named "deployment"
 - Upload the file "deployment_file.json" to the new folder
-![image](https://github.com/user-attachments/assets/5f722595-71ec-4668-9bce-0151eabb879e)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_add_deployment_file.png)
 
 
 ### 5. Import & Run Notebook
