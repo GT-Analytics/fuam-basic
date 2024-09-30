@@ -112,6 +112,10 @@ In case of an error, you'll be able to run the notebook again. It has an update 
 
 
 
+## Important
 
-
+- This is a community project that is **not** supported by Microsoft.
+- The code in this repository and any related information are without warranty of any kind.
+- The deployed solution will result in a Compute Unit (CU) utilization on your Power BI/Fabric tenant.
+- The deployed solution will utilize CUs (Compute Units) on your Microsoft Fabric SKU on your PBI/Fabric tenant.
 
