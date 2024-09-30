@@ -1,5 +1,6 @@
 # Fabric Unified Admin Monitoring (FUAM)
 
+
 ## Introduction
 
 Fabric Unfied Admin Monitoring (short: FUAM) is a solution to enable a holistic monitoring on top of Power BI and Fabric. 
@@ -43,7 +44,11 @@ Fuam Basic extracts the following data from the tenant:
 
 ## FUAM Basic Deployment
 
-The deployment of FUAM Basic can be done with very little effort, since we tried to automize as much as possible. The following steps need to be done:
+The deployment of FUAM Basic can be done with very little effort, since we tried to automize as much as possible. 
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/FUAM_basic_deployment_process_cover_1.png)
+
+
+The following steps need to be done:
 
 ### 1. Download Files
 
@@ -111,15 +116,6 @@ In case of an error, you'll be able to run the notebook again. It has an update 
   -  display_data: Mainly used for debugging. Shows outputs in notebooks
 
 
-
-## Important
-
-- This is a community project that is **not** supported by Microsoft.
-- The code in this repository and any related information are without warranty of any kind.
-- The deployed solution will utilize CUs (Compute Units) on your Microsoft Fabric SKU on your PBI/Fabric tenant.
-- FUAM Basic has been tested on some large tenants, however the CU utilization depends on multiple factors like: count of Fabric SKUs, count of workspaces, count of users, count of changes within the tenant, etc.
-- Please test the solution on a non-production Fabric SKU first without impacting other workloads on your tenant.
-
 ## Remarks
 - There can be errors in case specific item types have not been created on the tenant, yet. We tried to reduce these kind of errors, by catching this kind of errors, but on relatively empty tenants this could still effect the execution
 - In some cases the reports throw an error because of missing fields, which have not been provided by the API. In this case please execute the following steps:
@@ -136,6 +132,15 @@ In case of an error, you'll be able to run the notebook again. It has an update 
     ![image](https://github.com/user-attachments/assets/eb9a89a9-18c6-44c4-b99b-0abad2096d69)
     
   - Test semantic model refresh & report
+ 
+
+## Important
+
+- This is a community project that is **not** supported by Microsoft.
+- The code in this repository and any related information are without warranty of any kind.
+- The deployed solution will utilize CUs (Compute Units) on your Microsoft Fabric SKU on your PBI/Fabric tenant.
+- FUAM Basic has been tested on some large tenants, however the CU utilization depends on multiple factors like: count of Fabric SKUs, count of workspaces, count of users, count of changes within the tenant, etc.
+- Please test the solution on a non-production Fabric SKU first without impacting other workloads on your tenant.
 
 
 
