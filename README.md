@@ -120,3 +120,6 @@ In case of an error, you'll be able to run the notebook again. It has an update 
 - FUAM Basic has been tested on some large tenants, however the CU utilization depends on multiple factors like: count of Fabric SKUs, count of workspaces, count of users, count of changes within the tenant, etc.
 - Please test the solution on a non-production Fabric SKU first without impacting other workloads on your tenant.
 
+## Remarks
+- There can be errors in case specific item types have not been created on the tenant, yet. We tried to reduce these kind of errors, by catching this kind of errors, but on relatively empty tenants this could still effect the execution
+
