@@ -122,4 +122,22 @@ In case of an error, you'll be able to run the notebook again. It has an update 
 
 ## Remarks
 - There can be errors in case specific item types have not been created on the tenant, yet. We tried to reduce these kind of errors, by catching this kind of errors, but on relatively empty tenants this could still effect the execution
+- In some cases the reports throw an error because of missing fields, which have not been provided by the API. In this case please execute the following steps:
+  - Try to refresh the underlying semantic model. Check if there is an error as in the following picture:
+    ![image](https://github.com/user-attachments/assets/a665acb6-0d54-4ccf-b54d-cad19d7703db)
+    
+  - Open the semantic model
+    ![image](https://github.com/user-attachments/assets/2d24db56-9256-402a-bd03-888ace77f1c6)
+    
+  - Click on "Edit tables"
+    ![image](https://github.com/user-attachments/assets/74537ca3-f2e5-448b-b411-d7c3fc315781)
+    
+  - Press "Confirm" to refresh semantic model meta data
+    ![image](https://github.com/user-attachments/assets/eb9a89a9-18c6-44c4-b99b-0abad2096d69)
+    
+  - Test semantic model refresh & report
+
+
+
+
 
