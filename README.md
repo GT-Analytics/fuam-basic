@@ -114,6 +114,10 @@ In case of an error, you'll be able to run the notebook again. It has an update 
   -  extract_powerbi_artifacts_only : Set "true" if there are no Fabric items on your tenant
   -  activity_days_in_scope: Specify, how many days of activity data should be extracted
   -  display_data: Mainly used for debugging. Shows outputs in notebooks
+ 
+### 7. Refresh the semantic models
+- In some cases it is necessary to refresh the semantic models one time after the deployment because of the Direct Lake usage before using the reports
+- In case of an refresh error see "Remarks" section
 
 
 ## Remarks
