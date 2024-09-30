@@ -117,5 +117,6 @@ In case of an error, you'll be able to run the notebook again. It has an update 
 - This is a community project that is **not** supported by Microsoft.
 - The code in this repository and any related information are without warranty of any kind.
 - The deployed solution will utilize CUs (Compute Units) on your Microsoft Fabric SKU on your PBI/Fabric tenant.
-- The CU utilization depends on multiple factors like: count of Fabric SKUs, count of workspaces, count of users, count of changes within the tenant, etc.
+- FUAM Basic has been tested on some large tenants, however the CU utilization depends on multiple factors like: count of Fabric SKUs, count of workspaces, count of users, count of changes within the tenant, etc.
+- Please test the solution on a non-production Fabric SKU first without impacting other workloads on your tenant.
 
