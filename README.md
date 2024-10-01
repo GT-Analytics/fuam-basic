@@ -123,6 +123,7 @@ In case of an error, you'll be able to run the notebook again. It has an update 
 
 
 ## Remarks
+- There is a maximum of 500 requests a 100 workspaces possible through the scanner api. If you have more than 50.000 workspaces in your organisation, this can lead into an error. Please feel free to contact us, to discuss options
 - There can be errors in case specific item types have not been created on the tenant, yet. We tried to reduce these kind of errors, by catching this kind of errors, but on relatively empty tenants this could still effect the execution
 - In some cases the reports throw an error because of missing fields, which have not been provided by the API. In this case please execute the following steps:
   - Try to refresh the underlying semantic model. Check if there is an error as in the following picture:
