@@ -66,7 +66,7 @@ Add the service principal to a group enabled for the following two admin setting
 
 
 The following steps are also shown in the following video:
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_video_cover.png)
+[![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_video_cover.png)](https://youtu.be/H9YHHubOaGM)
 
 
 ### 3. Create Connections
