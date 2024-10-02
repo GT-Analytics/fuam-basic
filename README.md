@@ -41,6 +41,37 @@ FUAM Basic extracts the following data from the tenant:
 - Tenant meta data (Scanner API)
 - Capacity Refreshables
 
+### FUAM Reporting | Tenant Overview | Screenshots
+Report name in Workspace: **FUAM_Basic_Overview_Report** 
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_0.png)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_1.png)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_2.png)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_3.png)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_4.png)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_5.png)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_6.png)
+
+
+### FUAM Reporting | Activities | Screenshots
+Report name in Workspace: **FUAM_Activities_Report** 
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_7.png)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_8.png)
+
+### FUAM Reporting | Capacity Refreshables | Screenshots
+Report name in Workspace: **FUAM_Capacity_Refreshables_Report** 
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_9.png)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_10.png)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_11.png)
+
 
 ## FUAM Basic Deployment
 
