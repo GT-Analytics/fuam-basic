@@ -1,4 +1,5 @@
 # Fabric Unified Admin Monitoring (FUAM)
+**This is a community project that is **not** supported by Microsoft.**
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_cover.png)
 
@@ -31,8 +32,6 @@ There are two different versions of FUAM available:
 
 
 ## FUAM Basic Content
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/FUAM_basic_architecture.png)
-
 FUAM Basic extracts the following data from the tenant:
 - Tenant Settings
 - Delegated Tenant Settings
@@ -41,8 +40,16 @@ FUAM Basic extracts the following data from the tenant:
 - Capacities
 - Tenant meta data (Scanner API)
 - Capacity Refreshables
+- 
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/FUAM_basic_architecture.png)
 
-### FUAM Reporting | Tenant Overview | Screenshots
+### FUAM Reporting
+
+FUAM comes with a set of standard report enabling a quick overview on the data, but it's intended to give the users all tool to customize or build the own reports on top of the data model.
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_reporting_cover.png)
+
+#### FUAM Reporting | Tenant Overview | Screenshots
 Report name in Workspace: **FUAM_Basic_Overview_Report** 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_0.png)
 
@@ -59,13 +66,13 @@ Report name in Workspace: **FUAM_Basic_Overview_Report**
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_6.png)
 
 
-### FUAM Reporting | Activities | Screenshots
+#### FUAM Reporting | Activities | Screenshots
 Report name in Workspace: **FUAM_Activities_Report** 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_7.png)
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_8.png)
 
-### FUAM Reporting | Capacity Refreshables | Screenshots
+#### FUAM Reporting | Capacity Refreshables | Screenshots
 Report name in Workspace: **FUAM_Capacity_Refreshables_Report** 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_9.png)
 
