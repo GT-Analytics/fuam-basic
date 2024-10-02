@@ -140,6 +140,9 @@ In case of an error, you'll be able to run the notebook again. It has an update 
     
   - Test semantic model refresh & report
  
+## Known Errors
+- There can be an error if there is no workspace description on the whole tenant. In this case just add one workspace description. This will fix the error
+ 
 
 ## Important
 
