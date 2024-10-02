@@ -1,5 +1,6 @@
 # Fabric Unified Admin Monitoring (FUAM)
 
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_cover.png)
 
 ## Introduction
 
@@ -187,6 +188,5 @@ In case of an error, you'll be able to run the notebook again. It has an update 
 - Please test the solution on a non-production Fabric SKU first without impacting other workloads on your tenant.
 
 
-
-
-
+### Logo
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_text_logo.png)
