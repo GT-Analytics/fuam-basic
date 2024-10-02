@@ -141,7 +141,9 @@ In case of an error, you'll be able to run the notebook again. It has an update 
   - Test semantic model refresh & report
  
 ## Known Errors
-- There can be an error if there is no workspace description on the whole tenant. In this case just add one workspace description. This will fix the error
+- There are some known issues on "empty" or demo tenants, where some objects do not exist, which causes errors:
+  - If there is no workspace description on the whole tenant. In this case just add one workspace description. This will fix the error
+  - In case there are no regular scheduled refreshes on the tenant, the execution for capacity refreshables can fail. This should be resolved by creating a scheduled refresh and running it multiple times
  
 
 ## Important
