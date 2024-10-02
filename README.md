@@ -1,7 +1,7 @@
 # Fabric Unified Admin Monitoring (FUAM)
 **This is a community project that is **not** supported by Microsoft.**
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_cover.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_cover_main.png)
 
 ## Introduction
 
