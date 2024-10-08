@@ -160,6 +160,16 @@ In case of an error, you'll be able to run the notebook again. It has an update 
 - In case of an refresh error see "Remarks" section
 
 
+## Lakehouse data lineage
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_data_lineage_1.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_data_lineage_2.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_data_lineage_3.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_data_lineage_4.png)
+
+## Orchestration pipeline parameters
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_pipeline_parameters.png)
+
 ## Remarks
 - There is a maximum of 500 requests a 100 workspaces possible through the scanner api. If you have more than 50.000 workspaces in your organisation, this can lead into an error. Please feel free to contact us, to discuss options
 - There can be errors in case specific item types have not been created on the tenant, yet. We tried to reduce these kind of errors, by catching this kind of errors, but on relatively empty tenants this could still effect the execution
