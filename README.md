@@ -39,7 +39,7 @@ FUAM Basic extracts the following data from the tenant:
 - Capacities
 - Tenant meta data (Scanner API)
 - Capacity Refreshables
-- 
+  
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/FUAM_basic_architecture.png)
 
 ### FUAM Reporting
