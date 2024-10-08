@@ -147,7 +147,7 @@ In case of an error, you'll be able to run the notebook again. It has an update 
 ### 6. Run extraction pipeline
 
 - Go to workspace and do a browser refresh
-- Open pipeline "Load_Seq_Overview_Package_E2E"
+- Open pipeline "Load_Basic_Package_Sequentially_E2E"
 - Run or Schedule Pipeline
 - Adjust parameters, if needed:
   -  has_tenant_domains: Use this, if domains are in use at your tenant
