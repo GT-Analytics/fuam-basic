@@ -193,6 +193,7 @@ In case of an error, you'll be able to run the notebook again. It has an update 
   - If there is no workspace description on the whole tenant. In this case just add one workspace description. This will fix the error
   - In case there are no regular scheduled refreshes on the tenant, the execution for capacity refreshables can fail. This should be resolved by creating a scheduled refresh and running it multiple times
   - In case the are no delegated tenant settings set in one of the capacities, the extraction step will fail. You can remove this step if it is not needed in your tenant
+  - Currently the notebook within the pipeline "Load_Inventory_E2E" is using the users identity to query the metascanner api. In case the user doesn't have permission, this will fail. We are working on an alternative solution
  
 
 ## Important
