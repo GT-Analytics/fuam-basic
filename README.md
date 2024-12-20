@@ -143,8 +143,18 @@ Write down the Connection IDs for later usage.
 
 In case of an error, you'll be able to run the notebook again. It has an update mechansim, which will handle an update
 
+### 6. OPTIONAL Create Key Vault and Secrets
+- Since the extraction of scanner api data is implemented in the notebook "01_Transfer_Incremental_Inventory_Unit" it can not use the created connections.
+- By default the script uses the notebooks owner identity, when executed through a pipeline. In case you want to use a service principal instead, you need to create a Key Vault on Azure side to store the Service Principals credentials
+- Creation of Key Vault
+  - Create key vault and note down the name (e.g. fuamkv, This will be configured in the main pipeline, Also an existing Key Vault could be used)
+  - Create 3 secrets with the following names: fuam-sp-tenant, fuam-sp-client, fuam-sp-secret
+  - Fill the secrets with the respective values of the service principal
+  - Authorize the owner of the notebook to be able to read the secrets (e.g. role Key Vault Secrets User)
+  - In case you can not allow public access from all networks, you need to configure a managed private endpoint from the FUAM Workspace (https://learn.microsoft.com/en-us/fabric/security/security-managed-private-endpoints-create). This has an influence on the performance of notebooks, since starter pool can not be used anymore
 
-### 6. Run extraction pipeline
+
+### 7. Run extraction pipeline
 
 - Go to workspace and do a browser refresh
 - Open pipeline "Load_Basic_Package_Sequentially_E2E"
@@ -154,8 +164,9 @@ In case of an error, you'll be able to run the notebook again. It has an update 
   -  extract_powerbi_artifacts_only : Set "true" if there are no Fabric items on your tenant
   -  activity_days_in_scope: Specify, how many days of activity data should be extracted
   -  display_data: Mainly used for debugging. Shows outputs in notebooks
+  -  keyvault: Optional, in case you configured a key vault, enter the key vaults name. Otherwise just supply a dummy value. In that case the notebook will use the Notebooks owners identity
  
-### 7. Refresh the semantic models
+### 8. Refresh the semantic models
 - In some cases it is necessary to refresh the semantic models one time after the deployment because of the Direct Lake usage before using the reports
 - In case of an refresh error see "Remarks" section
 
@@ -193,7 +204,7 @@ In case of an error, you'll be able to run the notebook again. It has an update 
   - If there is no workspace description on the whole tenant. In this case just add one workspace description. This will fix the error
   - In case there are no regular scheduled refreshes on the tenant, the execution for capacity refreshables can fail. This should be resolved by creating a scheduled refresh and running it multiple times
   - In case the are no delegated tenant settings set in one of the capacities, the extraction step will fail. You can remove this step if it is not needed in your tenant
-  - Currently the notebook within the pipeline "Load_Inventory_E2E" is using the users identity to query the metascanner api. In case the user doesn't have permission, this will fail. We are working on an alternative solution
+  - Currently the notebook within the pipeline "Load_Inventory_E2E" is using the notebook owners identity to query the metascanner api. In case the user doesn't have permission, this will fail. We are working on an alternative solution
  
 
 ## Important
