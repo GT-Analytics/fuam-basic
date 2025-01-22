@@ -39,6 +39,11 @@ FUAM Basic extracts the following data from the tenant:
 - Capacities
 - Tenant meta data (Scanner API)
 - Capacity Refreshables
+- Git Connections
+
+Optionally, you can use two other FUAM Basic reports:
+- On-Prem Gateway Logs Ad-hoc Analyzer
+- Tabular Model Meta Data Analyzer (TMMDA)
   
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/FUAM_basic_architecture.png)
 
@@ -50,7 +55,6 @@ FUAM comes with a set of standard report enabling a quick overview on the data, 
 
 #### FUAM Reporting | Tenant Overview | Screenshots
 Report name in Workspace: **FUAM_Basic_Overview_Report** 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/report_screenshot_0.png)
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/report_screenshot_1.png)
 
@@ -64,9 +68,6 @@ Report name in Workspace: **FUAM_Basic_Overview_Report**
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/report_screenshot_6.png)
 
-
-#### FUAM Reporting | Activities | Screenshots
-Report name in Workspace: **FUAM_Activities_Report** 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/report_screenshot_7.png)
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/report_screenshot_8.png)
@@ -78,6 +79,10 @@ Report name in Workspace: **FUAM_Capacity_Refreshables_Report**
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/report_screenshot_10.png)
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/report_screenshot_11.png)
+
+
+#### FUAM Reporting | Activities | Screenshots
+Report name in Workspace: **FUAM_Activities_Report** 
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/report_screenshot_12.png)
 
