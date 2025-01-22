@@ -85,6 +85,8 @@ Report name in Workspace: **FUAM_Capacity_Refreshables_Report**
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/report_screenshot_14.png)
 
+![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/report_screenshot_15.png)
+
 
 ## FUAM Basic Deployment
 
