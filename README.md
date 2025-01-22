@@ -51,7 +51,7 @@ Optionally, you can use two other FUAM Basic reports:
 
 FUAM comes with a set of standard report enabling a quick overview on the data, but it's intended to give the users all tool to customize or build the own reports on top of the data model.
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_reporting_cover.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/fuam_basic_reporting_cover.png)
 
 #### FUAM Reporting | Tenant Overview | Screenshots
 Report name in Workspace: **FUAM_Basic_Overview_Report** 
