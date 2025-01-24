@@ -15,7 +15,7 @@ Today monitoring for Fabric can be done through different reports, apps and tool
 Additionally it is possible to use different external tools to extract even more information on a more fine granular level with e.g. Vertipaq Analyzer or Data Studio Query Trace.
 On top of that [Power BI](https://learn.microsoft.com/en-us/rest/api/power-bi/) and [Fabric](https://learn.microsoft.com/en-us/rest/api/fabric/articles/) provide a lot of different APIs, which allow you to extract various data from your tenant.
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/fuam-current-overview.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/fuam_monitoring_map_cover.png)
 
 FUAM has the goal to provide a more holistic view on top of the various information, which can be extracted from Fabric, allowing it's users to analyze at a very high level, but also to deep dive into specific artifacts for a more fine granular data analysis.
 
