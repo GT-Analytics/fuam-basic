@@ -9,15 +9,13 @@ Today monitoring for Fabric can be done through different reports, apps and tool
 - Feature Usage & Adoption
 - Purview Hub
 - Capacity Metrics App
-- Log Analytics Integration at Workspace Level
+- Workspace Monitoring
 - Usage Metrics Report
 
-Additionally it is possible to use different external tools to extract even more information on a more fine granular level with e.g. Vertipaq Analyzer or Data Studio Query Trace.
-On top of that [Power BI](https://learn.microsoft.com/en-us/rest/api/power-bi/) and [Fabric](https://learn.microsoft.com/en-us/rest/api/fabric/articles/) provide a lot of different APIs, which allow you to extract various data from your tenant.
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/fuam_monitoring_map_cover.png)
 
 FUAM has the goal to provide a more holistic view on top of the various information, which can be extracted from Fabric, allowing it's users to analyze at a very high level, but also to deep dive into specific artifacts for a more fine granular data analysis.
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/fuam_monitoring_map_cover.png)
 
 FUAM is completely build with Fabric capabilities with Pipelines and Notebooks as the main tool to extract and transform data. All of the data is stored in it's raw format, but also in Delta Parquet, enabling the user to directly use it through Power BI Direct Lake or the Lakehouse SQL Endpoint via SQL.
 FUAM comes with a set of standard report enabling a quick overview on the data, but it's intended to give the users all tool to customize or build the own reports on top of the data model. Through the openness of Fabric it's of course also possible to combine it with your own data enabling you to do the analysis you wish.
@@ -44,7 +42,15 @@ FUAM Basic extracts the following data from the tenant:
 Optionally, you can use two other FUAM Basic reports:
 - On-Prem Gateway Logs Ad-hoc Analyzer
 - Tabular Model Meta Data Analyzer (TMMDA)
-  
+
+
+### Architecture
+
+The architecture of FUAM is built on **Fabric items** like Pipelines, Notebooks, Lakehouses, Semantic models and Power BI reports.
+We have built the component in a **modular structure**, which helps you to extend FUAM with your own modules. This architecture design helps to maintain the solution also with ease.
+
+The **data ingestion** logic is orchastrated and parametizable, which allows to use the main orchestration pipeline for initial and incremental data loads.
+**FUAM Lakehouse** is one of the core component in the architecture. All the data is transformed and persisted in a way, which open amazing capabilities analyzing the collected data in a semantic model with DirectLake mode.
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/FUAM_basic_architecture.png)
 
 ### FUAM Reporting
