@@ -40,8 +40,8 @@ FUAM Basic extracts the following data from the tenant:
 - Git Connections
 
 Optionally, you can use two other FUAM Basic reports:
-- On-Prem Gateway Logs Ad-hoc Analyzer
-- Tabular Model Meta Data Analyzer (TMMDA)
+- On-Prem Gateway Logs Ad-hoc Analyzer -> Visit the wiki (https://github.com/GT-Analytics/fuam-basic/wiki/FUAM-SQL-Endpoint-Monitoring)
+- Tabular Model Meta Data Analyzer (TMMDA) -> Visit the wiki (https://github.com/GT-Analytics/fuam-basic/wiki/TMMDA-for-FUAM)
 
 
 ### Architecture
