@@ -98,13 +98,26 @@ Report name in Workspace: **FUAM_Activities_Report**
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/report_screenshot_15.png)
 
+--------------------------
 
-## FUAM Basic Deployment
 
+# FUAM Basic Deployment
+
+## Updating FUAM Basic
+
+**Have you already deployed FUAM?**
+
+Follow the instructions in WIKI -> https://github.com/GT-Analytics/fuam-basic/wiki/FUAM-Deployment-Lifecycle
+
+---------------
+
+## Initial Deployment of FUAM Basic
 **Before you start deploying the solution, please read the 'Important' section below.**
+
 
 The deployment of FUAM Basic can be done with very little effort, since we tried to automize as much as possible. 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/FUAM_basic_deployment_process_cover_1.png)
+
 
 The following steps need to be done:
 
