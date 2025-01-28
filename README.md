@@ -197,11 +197,16 @@ In case of an error, you'll be able to run the notebook again. It has an update 
   -  activity_days_in_scope: Specify, how many days of activity data should be extracted
   -  display_data: Mainly used for debugging. Shows outputs in notebooks
   -  keyvault: Optional, in case you configured a key vault, enter the key vaults name. Otherwise just supply a dummy value. In that case the notebook will use the Notebooks owners identity
+
+### 8. Run the 'Generate_Static_Tables' notebook
+- Navigate to the notebook **'Generate_Static_Tables'**
+- Click on **'Run All'** (It generates two static tables, which are improving the report experience)
  
-### 8. Refresh the semantic models
+### 9. Refresh the semantic models
 - In some cases it is necessary to refresh the semantic models one time after the deployment because of the Direct Lake usage before using the reports
 - In case of an refresh error see "Remarks" section
 
+------------------------------------
 
 ## Lakehouse data lineage
 
