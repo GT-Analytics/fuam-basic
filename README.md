@@ -205,10 +205,10 @@ In case of an error, you'll be able to run the notebook again. It has an update 
 
 ## Lakehouse data lineage
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_data_lineage_1.png)
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_data_lineage_2.png)
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_data_lineage_3.png)
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_data_lineage_4.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/fuam_basic_data_lineage_1.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/fuam_basic_data_lineage_2.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/fuam_basic_data_lineage_3.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/dev/assets/fuam_basic_data_lineage_4.png)
 
 ## Orchestration pipeline parameters
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_pipeline_parameters.png)
