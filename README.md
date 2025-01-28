@@ -158,9 +158,9 @@ Write down the Connection IDs for later usage.
 ### 4. Create Workspace and Config Lakehouse
 
 - Create a new workspace "FUAM Basic" (Name Can be changed), which is backed by a P or F-capacity
-- Create a new Lakehouse called "FUAM_Config_Lakehouse"
-- Within the files section, create a subfolder named "deployment"
-- Upload the file "deployment_file.json" to the new folder
+- Create a new Lakehouse called **'FUAM_Config_Lakehouse'** (without schemas)
+- Within the files section, create a subfolder named **'deployment'**
+- Upload the file **'deployment_file.json'** to the new folder
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_add_deployment_file.png)
 
