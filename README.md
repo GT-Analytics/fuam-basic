@@ -167,7 +167,7 @@ Write down the Connection IDs for later usage.
 
 ### 5. Import & Run Notebook
 
-- Import the notebook "deploy_fuam_basic.ipynb" into the workspace
+- Import the notebook **'Deploy_FUAM_Basic.ipynb'** into the workspace via the Fabric experience
 - Open the notebook and adjust the following variables with the connection IDs
   - conn_pbi_service_api_admin
   - conn_fabric_service_api_admin
