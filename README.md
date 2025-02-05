@@ -9,15 +9,13 @@ Today monitoring for Fabric can be done through different reports, apps and tool
 - Feature Usage & Adoption
 - Purview Hub
 - Capacity Metrics App
-- Log Analytics Integration at Workspace Level
+- Workspace Monitoring
 - Usage Metrics Report
 
-Additionally it is possible to use different external tools to extract even more information on a more fine granular level with e.g. Vertipaq Analyzer or Data Studio Query Trace.
-On top of that [Power BI](https://learn.microsoft.com/en-us/rest/api/power-bi/) and [Fabric](https://learn.microsoft.com/en-us/rest/api/fabric/articles/) provide a lot of different APIs, which allow you to extract various data from your tenant.
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam-current-overview.png)
 
 FUAM has the goal to provide a more holistic view on top of the various information, which can be extracted from Fabric, allowing it's users to analyze at a very high level, but also to deep dive into specific artifacts for a more fine granular data analysis.
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_monitoring_map_cover.png)
 
 FUAM is completely build with Fabric capabilities with Pipelines and Notebooks as the main tool to extract and transform data. All of the data is stored in it's raw format, but also in Delta Parquet, enabling the user to directly use it through Power BI Direct Lake or the Lakehouse SQL Endpoint via SQL.
 FUAM comes with a set of standard report enabling a quick overview on the data, but it's intended to give the users all tool to customize or build the own reports on top of the data model. Through the openness of Fabric it's of course also possible to combine it with your own data enabling you to do the analysis you wish.
@@ -39,7 +37,20 @@ FUAM Basic extracts the following data from the tenant:
 - Capacities
 - Tenant meta data (Scanner API)
 - Capacity Refreshables
-  
+- Git Connections
+
+Optionally, you can use two other FUAM Basic reports:
+- On-Prem Gateway Logs Ad-hoc Analyzer -> Visit the wiki (https://github.com/GT-Analytics/fuam-basic/wiki/FUAM-SQL-Endpoint-Monitoring)
+- Tabular Model Meta Data Analyzer (TMMDA) -> Visit the wiki (https://github.com/GT-Analytics/fuam-basic/wiki/TMMDA-for-FUAM)
+
+
+### Architecture
+
+The architecture of FUAM is built on **Fabric items** like Pipelines, Notebooks, Lakehouses, Semantic models and Power BI reports.
+We have built the component in a **modular structure**, which helps you to extend FUAM with your own modules. This architecture design helps to maintain the solution also with ease.
+
+The **data ingestion** logic is orchastrated and parametizable, which allows to use the main orchestration pipeline for initial and incremental data loads.
+**FUAM Lakehouse** is one of the core component in the architecture. All the data is transformed and persisted in a way, which open amazing capabilities analyzing the collected data in a semantic model with DirectLake mode.
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/FUAM_basic_architecture.png)
 
 ### FUAM Reporting
@@ -50,7 +61,6 @@ FUAM comes with a set of standard report enabling a quick overview on the data, 
 
 #### FUAM Reporting | Tenant Overview | Screenshots
 Report name in Workspace: **FUAM_Basic_Overview_Report** 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_0.png)
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_1.png)
 
@@ -64,9 +74,6 @@ Report name in Workspace: **FUAM_Basic_Overview_Report**
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_6.png)
 
-
-#### FUAM Reporting | Activities | Screenshots
-Report name in Workspace: **FUAM_Activities_Report** 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_7.png)
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_8.png)
@@ -80,12 +87,37 @@ Report name in Workspace: **FUAM_Capacity_Refreshables_Report**
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_11.png)
 
 
-## FUAM Basic Deployment
+#### FUAM Reporting | Activities | Screenshots
+Report name in Workspace: **FUAM_Activities_Report** 
 
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_12.png)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_13.png)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_14.png)
+
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_15.png)
+
+--------------------------
+
+
+# FUAM Basic Deployment
+
+## Updating FUAM Basic
+
+**Have you already deployed FUAM?**
+
+Follow the instructions in WIKI -> https://github.com/GT-Analytics/fuam-basic/wiki/FUAM-Deployment-Lifecycle
+
+---------------
+
+## Initial Deployment of FUAM Basic
 **Before you start deploying the solution, please read the 'Important' section below.**
+
 
 The deployment of FUAM Basic can be done with very little effort, since we tried to automize as much as possible. 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/FUAM_basic_deployment_process_cover_1.png)
+
 
 The following steps need to be done:
 
@@ -126,20 +158,20 @@ Write down the Connection IDs for later usage.
 ### 4. Create Workspace and Config Lakehouse
 
 - Create a new workspace "FUAM Basic" (Name Can be changed), which is backed by a P or F-capacity
-- Create a new Lakehouse called "FUAM_Config_Lakehouse"
-- Within the files section, create a subfolder named "deployment"
-- Upload the file "deployment_file.json" to the new folder
+- Create a new Lakehouse called **'FUAM_Config_Lakehouse'** (without schemas)
+- Within the files section, create a subfolder named **'deployment'**
+- Upload the file **'deployment_file.json'** to the new folder
 
 ![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_add_deployment_file.png)
 
 
 ### 5. Import & Run Notebook
 
-- Import the notebook "deploy_fuam_basic.ipynb" into the workspace
+- Import the notebook **'Deploy_FUAM_Basic.ipynb'** into the workspace via the Fabric experience
 - Open the notebook and adjust the following variables with the connection IDs
   - conn_pbi_service_api_admin
   - conn_fabric_service_api_admin
--  Press "Run All" to execute the deployment of the FUAM artifacts
+-  Press **'Run All'** to execute the deployment of the FUAM artifacts
 
 In case of an error, you'll be able to run the notebook again. It has an update mechansim, which will handle an update
 
@@ -157,7 +189,7 @@ In case of an error, you'll be able to run the notebook again. It has an update 
 ### 7. Run extraction pipeline
 
 - Go to workspace and do a browser refresh
-- Open pipeline "Load_Basic_Package_Sequentially_E2E"
+- Open pipeline **'Load_Basic_Package_Sequentially_E2E'**
 - Run or Schedule Pipeline
 - Adjust parameters, if needed:
   -  has_tenant_domains: Use this, if domains are in use at your tenant
@@ -165,11 +197,12 @@ In case of an error, you'll be able to run the notebook again. It has an update 
   -  activity_days_in_scope: Specify, how many days of activity data should be extracted
   -  display_data: Mainly used for debugging. Shows outputs in notebooks
   -  keyvault: Optional, in case you configured a key vault, enter the key vaults name. Otherwise just supply a dummy value. In that case the notebook will use the Notebooks owners identity
- 
+
 ### 8. Refresh the semantic models
 - In some cases it is necessary to refresh the semantic models one time after the deployment because of the Direct Lake usage before using the reports
 - In case of an refresh error see "Remarks" section
 
+------------------------------------
 
 ## Lakehouse data lineage
 
@@ -204,7 +237,7 @@ In case of an error, you'll be able to run the notebook again. It has an update 
   - If there is no workspace description on the whole tenant. In this case just add one workspace description. This will fix the error
   - In case there are no regular scheduled refreshes on the tenant, the execution for capacity refreshables can fail. This should be resolved by creating a scheduled refresh and running it multiple times
   - In case the are no delegated tenant settings set in one of the capacities, the extraction step will fail. You can remove this step if it is not needed in your tenant
-  - Currently the notebook within the pipeline "Load_Inventory_E2E" is using the notebook owners identity to query the metascanner api. In case the user doesn't have permission, this will fail. We are working on an alternative solution
+  - FIXED (see Initial Deployment Step 6.): Currently the notebook within the pipeline "Load_Inventory_E2E" is using the notebook owners identity to query the metascanner api. In case the user doesn't have permission, this will fail. We are working on an alternative solution
  
 
 ## Important
