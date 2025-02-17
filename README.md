@@ -52,8 +52,7 @@ The **data ingestion** logic is orchastrated and parametizable, which allows to 
 ------------------------------------
 
 # FUAM Basic Deployment
-
-### [Click here to **upgrade** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/FUAM-Deployment-Lifecycle)
+### [Click here to **upgrade** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Upgrading-FUAM)
  
 ### [Click here to **deploy** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Initial-Deployment)
 
