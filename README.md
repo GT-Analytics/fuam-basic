@@ -39,10 +39,6 @@ FUAM Basic extracts the following data from the tenant:
 - Capacity Refreshables
 - Git Connections
 
-Optionally, you can use two other FUAM Basic reports:
-- [FUAM Gateway Monitoring](https://github.com/GT-Analytics/fuam-basic/wiki/FUAM-SQL-Endpoint-Monitoring)
-- [Tabular Model Meta Data Analyzer (TMMDA)](https://github.com/GT-Analytics/fuam-basic/wiki/TMMDA-for-FUAM)
-
 
 ### Architecture
 
