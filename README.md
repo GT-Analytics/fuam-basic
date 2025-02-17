@@ -40,8 +40,8 @@ FUAM Basic extracts the following data from the tenant:
 - Git Connections
 
 Optionally, you can use two other FUAM Basic reports:
-- On-Prem Gateway Logs Ad-hoc Analyzer -> Visit the wiki (https://github.com/GT-Analytics/fuam-basic/wiki/FUAM-SQL-Endpoint-Monitoring)
-- Tabular Model Meta Data Analyzer (TMMDA) -> Visit the wiki (https://github.com/GT-Analytics/fuam-basic/wiki/TMMDA-for-FUAM)
+- [FUAM Gateway Monitoring](https://github.com/GT-Analytics/fuam-basic/wiki/FUAM-SQL-Endpoint-Monitoring)
+- [Tabular Model Meta Data Analyzer (TMMDA)](https://github.com/GT-Analytics/fuam-basic/wiki/TMMDA-for-FUAM)
 
 
 ### Architecture
@@ -107,7 +107,7 @@ Report name in Workspace: **FUAM_Activities_Report**
 
 **Have you already deployed FUAM?**
 
-Follow the instructions in WIKI -> https://github.com/GT-Analytics/fuam-basic/wiki/FUAM-Deployment-Lifecycle
+[Click here to and follow the instructions in WIKI](https://github.com/GT-Analytics/fuam-basic/wiki/FUAM-Deployment-Lifecycle)
 
 ---------------
 
