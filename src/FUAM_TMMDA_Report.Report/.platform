@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "FUAM_TMMDA_Report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8b2719b0-3c42-b5e5-4a59-20134a6d6519"
+  }
+}
