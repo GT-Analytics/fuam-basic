@@ -1,0 +1,8 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../FUAM_Basic_PBI_Overview_SM.SemanticModel"
+    }
+  }
+}

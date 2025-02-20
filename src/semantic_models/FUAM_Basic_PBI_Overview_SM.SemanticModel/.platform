@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "FUAM_Basic_PBI_Overview_SM"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3196a517-4257-a23f-4ddd-0c8c6c24c166"
+  }
+}

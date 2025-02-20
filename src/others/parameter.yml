@@ -1,0 +1,10 @@
+find_replace:
+    # SQL Connection Guid
+    "abe2c08e-52f8-429d-b14a-585da5090562":
+        FUAM Basic Automatic Deployment: pbi-connection-id-placeholder
+        CICD Test: 09286cef-5a4d-4ad3-bf59-b31f070d72c3
+        PROD: abe2c08e-52f8-429d-b14a-585da5090562
+    "2b83c283-e62e-472d-913f-44709bd527af":
+        FUAM Basic Automatic Deployment: fabric-connection-id-placeholder
+        CICD Test: 644f217a-8761-4f19-b1b7-a40bfe0ec2af
+        PROD: 2b83c283-e62e-472d-913f-44709bd527af    

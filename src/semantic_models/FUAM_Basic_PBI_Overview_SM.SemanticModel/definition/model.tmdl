@@ -1,0 +1,44 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.140.7525.1 (Main)+f63a344f9e090b82fbceba81dbe5d0be83564d27
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
+annotation __TEdtr = 1
+
+ref table dashboards
+ref table dataflows
+ref table activities
+ref table capacity_refreshables
+ref table aggregated_activities_last_30days
+ref table capacity_refreshable_times
+ref table capacity_refreshable_days
+ref table datasource_instances
+ref table active_items
+ref table calendar
+ref table semantic_models
+ref table capacities
+ref table reports
+ref table workspaces_scanned_users
+ref table workspaces
+ref table Metrics
+ref table tenant_settings
+ref table delegated_tenant_settings_overrides
+ref table capacity_refreshable_details
+ref table capacity_refreshable_summaries
+ref table git_connections
+ref table capacity_regions
+
+ref cultureInfo en-US
+

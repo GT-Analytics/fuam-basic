@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "Load_Inventory_E2E"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "bd5881fe-449b-9bf7-4e1b-6defaff9994f"
+  }
+}

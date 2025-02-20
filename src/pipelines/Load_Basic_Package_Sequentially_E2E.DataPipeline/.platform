@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "Load_Basic_Package_Sequentially_E2E"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "87503e47-6af9-ae60-4c21-ff71cf57a628"
+  }
+}

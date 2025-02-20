@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "FUAM_Activities_Report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9e8c74f6-5c8d-b096-408b-09a967021823"
+  }
+}

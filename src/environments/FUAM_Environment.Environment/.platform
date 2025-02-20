@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Environment",
+    "displayName": "FUAM_Environment"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "cc981406-4916-90c7-4519-1fa2b93ac312"
+  }
+}

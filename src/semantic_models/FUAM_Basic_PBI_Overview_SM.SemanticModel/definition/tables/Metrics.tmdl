@@ -1,0 +1,873 @@
+table Metrics
+	lineageTag: c805f12b-a3b3-4116-887a-1791384c44f8
+
+	measure '# Active Artifacts' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE()
+			)
+		formatString: #,0
+		displayFolder: Items
+		lineageTag: 8b8096ed-6aa4-4d83-87f0-27438b589c1d
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure '# Activities' = COUNTROWS(activities)
+		formatString: #,0
+		displayFolder: Activities\General
+		lineageTag: 3955e3b0-a2c0-4036-97c4-dbdf64c636cd
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure '# Activities 30d (Aggregated)' = SUM(aggregated_activities_last_30days[CountOfActivities])
+		formatString: #,0
+		displayFolder: Activities\General
+		lineageTag: 4e0fa99b-143a-4ce7-8748-e4e0dcb33a98
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure '# Capacities' =
+			
+			CALCULATE(
+			    COUNT(capacities[CapacityId]),
+			    capacities[fuam_deleted] = FALSE()
+			)
+		formatString: #,0
+		displayFolder: Capacities
+		lineageTag: 0436f135-213e-443f-8a0c-bd6f11cc960e
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure '# Dashboards (Inventory)' = COUNTROWS(dashboards)
+		formatString: #,0
+		displayFolder: Inventory
+		lineageTag: 9c96c2c3-7bca-4f82-87a2-4c6e2dfef41c
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure '# Dataflows (Inventory)' = COUNTROWS(dataflows)
+		formatString: #,0
+		displayFolder: Inventory
+		lineageTag: 8ddb0541-58de-47bc-b713-a7e947faa1f6
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure '# Datasource Instances' = COUNTROWS(datasource_instances)
+		formatString: #,0
+		displayFolder: Gateways
+		lineageTag: 10ac93f8-3870-4d5c-91a1-d4934623d6c8
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure '# Reports (Inventory)' = COUNTROWS(reports)
+		formatString: #,0
+		displayFolder: Inventory
+		lineageTag: aa1caa2a-ad1a-4817-a2ed-fa1532c64fd4
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure '# Semantic Models (Inventory)' = COUNTROWS(semantic_models)
+		formatString: #,0
+		displayFolder: Inventory
+		lineageTag: 4b54b412-4280-4d9b-b747-9ca35691cde5
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure '# Workspaces' =
+			
+			CALCULATE(
+			    COUNT(workspaces[WorkspaceId]),
+			    workspaces[fuam_deleted] = FALSE()
+			)
+		formatString: #,0
+		displayFolder: Workspaces
+		lineageTag: d041c706-c091-4d13-9148-57f45994285c
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure '# Workspace Accesses' = DISTINCTCOUNT(workspaces_scanned_users[GraphId])
+		formatString: #,0
+		displayFolder: Workspaces
+		lineageTag: e8bca7f6-5521-4314-92c8-740af327b9d1
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure '# Tenant Settings Snapshots' = DISTINCTCOUNT(tenant_settings[TransferDateTime])
+		formatString: 0
+		displayFolder: Tenant Settings\Tenant Level
+		lineageTag: 2a378c4d-88c2-4635-ab06-5326d88eadb9
+
+	measure '# Different Datasource Types' = DISTINCTCOUNT(datasource_instances[DatasourceType])
+		formatString: 0
+		displayFolder: Gateways
+		lineageTag: bd761b09-ab1a-4e1e-9d57-267ea326c968
+
+	measure '# Lakehouses' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "Lakehouse"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 14538630-f3aa-4bc4-a2a0-18c0d7e85e15
+
+	measure '# ML Experiments' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "MLExperiment"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: c9995779-db0f-4731-9cc0-7d2c1a0c577e
+
+	measure '# Reflex' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "Reflex"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 81434f7d-8371-4048-b642-4d23cb8720c8
+
+	measure '# Mounted Databases' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "MontedDatabase"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 7f390b43-7571-477c-9262-db1845ae69eb
+
+	measure '# Dashboards' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "Dashboard"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 81aab67f-d640-4dfd-857d-9f574afe9876
+
+	measure '# Users' = DISTINCTCOUNT(activities[UserId])
+		formatString: #,0
+		displayFolder: Activities\General
+		lineageTag: 0d9f348e-98e6-483b-a9c5-7823251eae3c
+
+	measure '# KQL Querysets' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "KQLQueryset"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: fa62b435-35a6-4b04-b05e-8fef573f95c5
+
+	measure '# ML Models' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "MLModel"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 5abf4a06-9698-440e-b5d5-c412fb4026fd
+
+	measure '# Reports' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "Report"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 4003e501-2343-4713-b62b-40e964234569
+
+	measure '# Semantic Models' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "SemanticModel"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 463773d2-801f-453b-8c50-59072563c580
+
+	measure '# Mirrored Warehouses' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "MirroredWarehouse"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: e994c255-beda-40d4-bae4-cf1c9780f038
+
+	measure '# Eventstreams' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "Eventstream"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: ab07950f-67b9-43da-a202-a6bf6c0c0924
+
+	measure '# Notebooks' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "Notebook"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 82c42342-6fcd-403b-bdd0-de9d02e05ecf
+
+	measure '# KQL Databases' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "KQLDatabase"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: b21eec47-a8e7-42e6-9201-4e263be007e8
+
+	measure '# Datamarts' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "Datamart"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 188adeeb-3cc7-4bf8-82b7-1ee4b6e740c6
+
+	measure '# Dataflows' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "Dataflow"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 44fc57db-2319-46fe-a014-a5082ec58bdb
+
+	measure '# Pipelines' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "DataPipeline"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 9f7de853-f510-431f-96f5-153be4d1f60b
+
+	measure '# Warehouses' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "Warehouse"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 0f8e4d01-d36a-4f90-97d6-a59a49110245
+
+	measure '# Eventhouses' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "Eventhouse"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 2bb5bf27-2989-4971-ac09-e0c236c89129
+
+	measure '# Apps' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "App"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: f05492f1-e610-46f4-826e-b8f5ea1467a2
+
+	measure '# SQL Endpoints' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "SQLEndpoint"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 3c2d751a-a083-4946-92fb-00131c2551c3
+
+	measure Enabled =
+			
+			CALCULATE(
+			    COUNTROWS(tenant_settings),
+			    tenant_settings[enabled] = TRUE()
+			)
+		formatString: 0
+		displayFolder: Tenant Settings\Tenant Level
+		lineageTag: 3863d3bb-b0ca-463d-bead-31e9d5bc179a
+
+	measure Disabled =
+			
+			CALCULATE(
+			    COUNTROWS(tenant_settings),
+			    tenant_settings[enabled] = FALSE()
+			)
+		formatString: 0
+		displayFolder: Tenant Settings\Tenant Level
+		lineageTag: 529cddb5-be26-4238-b3c0-f9f5427bdcc1
+
+	measure '# Refreshable Items' =
+			
+			COUNTROWS(capacity_refreshables)
+		formatString: 0
+		displayFolder: Refreshables
+		lineageTag: 64954318-71d9-4f0a-810f-bd7525d1d10d
+
+	measure '# Semantic models in Composite mode' =
+			
+			CALCULATE(
+			    COUNT(semantic_models[SemanticModelId]),
+			    semantic_models[ContentProviderType] = "PbixInCompositeMode"
+			)
+		formatString: 0
+		displayFolder: Semantic Models\Storage Modes
+		lineageTag: e4019108-87c3-4825-80cc-38cd9f64a6aa
+
+	measure '# Semantic models in DirectQuery mode' =
+			
+			CALCULATE(
+			    COUNT(semantic_models[SemanticModelId]),
+			    semantic_models[ContentProviderType] = "PbixInDirectQueryMode"
+			)
+		formatString: 0
+		displayFolder: Semantic Models\Storage Modes
+		lineageTag: 797ce100-ab43-4942-a068-7d92c9fb8d60
+
+	measure '# Semantic models in Import mode' =
+			
+			CALCULATE(
+			    COUNT(semantic_models[SemanticModelId]),
+			    semantic_models[ContentProviderType] = "PbixInImportMode"
+			)
+		formatString: 0
+		displayFolder: Semantic Models\Storage Modes
+		lineageTag: f158878a-9c26-41e4-a5f4-c80a4779215a
+
+	measure 'Refresh Duration Minutes' =
+			
+			DIVIDE(
+			    SUM(capacity_refreshable_details[DurationInSeconds]),
+			    60
+			)
+		displayFolder: Refreshables\Details
+		lineageTag: b30cd76f-a0b4-4970-b34c-92583a364e67
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '# Refreshes' = SUM(capacity_refreshable_summaries[RefreshCount])
+		formatString: #,0
+		displayFolder: Refreshables\Summary
+		lineageTag: 02116206-c42f-452e-a445-f1e973dc51a4
+
+	measure 'Avg Refresh Duration Minutes' =
+			
+			DIVIDE(
+			    AVERAGE(capacity_refreshable_summaries[RefreshAverageDuration]),
+			    60
+			)
+		displayFolder: Refreshables\Summary
+		lineageTag: b1b4ab9a-85f1-4fde-b286-f0afa4acf331
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Consideration End' = MIN(capacity_refreshable_summaries[ConsideredEndTime])
+		formatString: General Date
+		displayFolder: Refreshables\Summary
+		lineageTag: 53b729bc-29f8-4b80-9c47-a1809346316d
+
+	measure 'Consideration Start' = MIN(capacity_refreshable_summaries[ConsideredStartTime])
+		formatString: General Date
+		displayFolder: Refreshables\Summary
+		lineageTag: bc9bf7e8-7c98-4514-8307-e88c9ed2cf31
+
+	measure 'Considered Days' =
+			
+			VAR _dayInt = 86400
+			RETURN
+			DIVIDE(
+			    SUM(capacity_refreshable_summaries[ConsiderationDurationSeconds]),
+			    _dayInt
+			)
+		displayFolder: Refreshables\Summary
+		lineageTag: 6848e462-4220-46b0-9a5d-005a6b4ba53c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Median Refresh Duration Minutes' =
+			
+			DIVIDE(
+			    MEDIAN(capacity_refreshable_summaries[RefreshMedianDuration]),
+			    60
+			)
+		displayFolder: Refreshables\Summary
+		lineageTag: 72f02b5e-34d1-4749-9bf3-f59957f461ae
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Last Enabled' =
+			
+			CALCULATE(
+			    COUNTROWS(tenant_settings),
+			    tenant_settings[enabled] = TRUE(),
+			    tenant_settings[TransferDateTime] = MAX(tenant_settings[TransferDateTime])
+			)
+		formatString: 0
+		displayFolder: Tenant Settings\Tenant Level
+		lineageTag: 7d3695b7-9603-46cc-8e1e-e6c949bf6fed
+
+	measure 'Last Disabled' =
+			
+			CALCULATE(
+			    COUNTROWS(tenant_settings),
+			    tenant_settings[enabled] = FALSE(),
+			    tenant_settings[TransferDateTime] = MAX(tenant_settings[TransferDateTime])
+			)
+		formatString: 0
+		displayFolder: Tenant Settings\Tenant Level
+		lineageTag: 9148e6b8-6573-4d14-a95c-530381d894d3
+
+	measure '# Activities PM' =
+			
+			// Previous Month
+			CALCULATE(
+			    [# Activities],
+			    'calendar'[IsPreviousMonth] = 1
+			)
+		formatString: #,0
+		displayFolder: Activities\Time Intelligence
+		lineageTag: 120c6f5f-5a2b-4c62-9ebd-899b1804313c
+
+	measure 'Activities Growth MoM' = ```
+			
+			VAR _prevMonth = 
+			    CALCULATE(
+			        [# Activities],
+			        PREVIOUSMONTH('calendar'[Date2Key])
+			    )
+			RETURN
+			DIVIDE(
+			    ([# Activities]- _prevMonth), 
+			    _prevMonth
+			)
+			```
+		formatString: 0%;-0%;0%
+		displayFolder: Tenant Growth
+		lineageTag: 84707bd8-1e60-43d4-8979-7e455eb6fe61
+
+	measure '# Scheduled Refreshables' =
+			
+			VAR _matrix =
+			SUMMARIZECOLUMNS(
+					capacity_refreshables[WorkspaceId],
+					capacity_refreshables[ItemId],
+					capacity_refreshable_days[Day],
+					capacity_refreshable_times[Time],
+					capacity_refreshables[IsRefreshEnabled],
+			        // Filter results only for enabled refreshes
+			        //TREATAS({TRUE}, 'capacity_refreshables'[IsRefreshEnabled]),
+					"scheduledRefreshes", [# Refreshable Items]
+				)
+			RETURN
+			SUMX(
+			    _matrix,
+			    [scheduledRefreshes]
+			)
+		formatString: 0
+		displayFolder: Refreshables
+		lineageTag: f38db52d-4350-4a02-8d48-78a4bf7f9b60
+
+	measure '# Activities PY' =
+			
+			// Previous Year
+			CALCULATE(
+			    [# Activities],
+			    'calendar'[IsPreviousYear] = 1
+			)
+		formatString: #,0
+		displayFolder: Activities\Time Intelligence
+		lineageTag: e2c77861-7c16-4dbb-ad99-68e1cb6b6c00
+
+	measure '# Viewed Reports (Activities)' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(activities[ReportId]),
+			    activities[Activity] = "ViewReport"
+			)
+		formatString: #,0
+		displayFolder: Activities\Usage
+		lineageTag: 1f1961b4-2482-4c7a-9ec0-ef5c739afd58
+
+	measure '# Activities CM' =
+			
+			// Current Month
+			CALCULATE(
+			    [# Activities],
+			    'calendar'[IsCurrentMonth] = 1
+			)
+		formatString: #,0
+		displayFolder: Activities\Time Intelligence
+		lineageTag: 94b3e530-7157-4c92-882a-635090e423d5
+
+	measure '# Users CM' =
+			
+			// Current Month
+			CALCULATE(
+			    [# Users],
+			    'calendar'[IsCurrentMonth] = 1
+			)
+		formatString: #,0
+		displayFolder: Activities\Time Intelligence
+		lineageTag: e7ebadb4-6388-4e38-a295-80a949c528ae
+
+	measure '# Users PM' =
+			
+			// Previous Month
+			CALCULATE(
+			    [# Users],
+			    'calendar'[IsPreviousMonth] = 1
+			)
+		formatString: #,0
+		displayFolder: Activities\Time Intelligence
+		lineageTag: 3aecd8fd-cdb9-4c29-8d16-c95903293ae6
+
+	measure '# Users PY' =
+			
+			// Previous Year
+			CALCULATE(
+			    [# Users],
+			    'calendar'[IsPreviousYear] = 1
+			)
+		formatString: #,0
+		displayFolder: Activities\Time Intelligence
+		lineageTag: 855b2fa8-0ba0-4246-8a85-3534fc5f0462
+
+	measure '# Enabled Refreshables' =
+			
+			VAR _matrix =
+			SUMMARIZECOLUMNS(
+					capacity_refreshables[WorkspaceId],
+					capacity_refreshables[ItemId],
+					capacity_refreshable_days[Day],
+					capacity_refreshable_times[Time],
+			        // Filter results only for enabled refreshes
+			        TREATAS({TRUE}, 'capacity_refreshables'[IsRefreshEnabled]),
+					"scheduledRefreshes", [# Refreshable Items]
+				)
+			RETURN
+			SUMX(
+			    _matrix,
+			    [scheduledRefreshes]
+			)
+		formatString: 0
+		displayFolder: Refreshables
+		lineageTag: 192e9bff-d4f4-46cf-a8ea-d9ac76ae0a68
+
+	measure '# Disabled Refreshables' =
+			
+			VAR _matrix =
+			SUMMARIZECOLUMNS(
+					capacity_refreshables[WorkspaceId],
+					capacity_refreshables[ItemId],
+					capacity_refreshable_days[Day],
+					capacity_refreshable_times[Time],
+			        // Filter results only for disabled refreshes
+			        TREATAS({FALSE}, 'capacity_refreshables'[IsRefreshEnabled]),
+					"scheduledRefreshes", [# Refreshable Items]
+				)
+			RETURN
+			SUMX(
+			    _matrix,
+			    [scheduledRefreshes]
+			)
+		formatString: 0
+		displayFolder: Refreshables
+		lineageTag: 0a090fe5-4ec7-4b93-8499-cef5d9218312
+
+	measure '# Git Connections' = COUNT(git_connections[workspaceId])
+		formatString: 0
+		displayFolder: Workspaces
+		lineageTag: 302d650e-be08-4c35-91dc-c08499a4b98e
+
+	measure 'Avg Refresh Duration Minutes (Det.)' =
+			
+			DIVIDE(
+			    AVERAGE(capacity_refreshable_details[DurationInSeconds]),
+			    60
+			)
+		displayFolder: Refreshables\Details
+		lineageTag: 5e99a980-16ca-4465-9bc4-204a9bf484bd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '# Activities CY' =
+			
+			// Current Year
+			CALCULATE(
+			    [# Activities],
+			    'calendar'[IsCurrentYear] = 1
+			)
+		formatString: #,0
+		displayFolder: Activities\Time Intelligence
+		lineageTag: 0cc938dc-1f85-41c3-87da-b764f653ad7c
+
+	measure '# Users CY' =
+			
+			// Current Month
+			CALCULATE(
+			    [# Users],
+			    'calendar'[IsCurrentYear] = 1
+			)
+		formatString: #,0
+		displayFolder: Activities\Time Intelligence
+		lineageTag: c8eb5648-b2b1-49f9-acd3-719cb163636c
+
+	measure 'Monthly Active User Growth MoM' = ```
+			
+			VAR _prevMonth = 
+			    CALCULATE(
+			        [# Users],
+			        PREVIOUSMONTH('calendar'[Date2Key])
+			    )
+			RETURN
+			DIVIDE(
+			    ([# Users] - _prevMonth), 
+			    _prevMonth
+			)
+			```
+		formatString: 0%;-0%;0%
+		displayFolder: Tenant Growth
+		lineageTag: f5df1b23-4ae7-4b4f-a329-408499027fb4
+
+	measure '# Activities last 30d' =
+			
+			CALCULATE(
+			    [# Activities],
+			    'calendar'[IsInLast30Days] = 1
+			)
+		formatString: #,0
+		displayFolder: Activities\Time Intelligence
+		lineageTag: ace525df-e6cf-43d7-a533-4fb18579222c
+
+	measure '# Activities last 14d' =
+			
+			CALCULATE(
+			    [# Activities],
+			    'calendar'[IsInLast14Days] = 1
+			)
+		formatString: #,0
+		displayFolder: Activities\Time Intelligence
+		lineageTag: 4a74fd9c-5648-4c78-85ab-a5b28df232c2
+
+	measure '# Users last 14d' =
+			
+			CALCULATE(
+			    [# Users],
+			    'calendar'[IsInLast14Days] = 1
+			)
+		formatString: #,0
+		displayFolder: Activities\Time Intelligence
+		lineageTag: 80329f49-3888-4bca-8818-c1347f04d48d
+
+	measure '# Users last 30d' =
+			
+			CALCULATE(
+			    [# Users],
+			    'calendar'[IsInLast30Days] = 1
+			)
+		formatString: #,0
+		displayFolder: Activities\Time Intelligence
+		lineageTag: 0054b861-e04f-4fcd-8799-f10f93ff93a7
+
+	measure '# AI Skills' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "AISkill"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: ac8ae4d6-5870-44b8-8a60-21596ea96143
+
+	measure '# Healthcare Data Solutions' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "Healthcaredatasolution"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 4823224b-0b54-48bf-af6d-3ca467b396c0
+
+	measure '# GraphQL APIs' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "GraphQLApi"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 05a645c3-0853-44cc-8b79-cbe035f16e11
+
+	measure '# Spark Job Definitions' =
+			
+			CALCULATE(
+			    COUNT(active_items[id]),
+			    active_items[fuam_deleted] = FALSE(),
+			    active_items[type] = "SparkJobDefinition"
+			)
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 84853b8e-8d24-46b1-9b1c-1e73cd3b8bb9
+
+	measure '# Workspace Accesses (User)' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(workspaces_scanned_users[GraphId]),
+			    workspaces_scanned_users[PrincipalType] = "User"
+			)
+		formatString: 0
+		displayFolder: Workspaces
+		lineageTag: 8369f218-a6b9-4f57-a25b-fce7ad76bfc2
+
+	measure '# Workspace Accesses (App)' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(workspaces_scanned_users[GraphId]),
+			    workspaces_scanned_users[PrincipalType] = "App"
+			)
+		formatString: 0
+		displayFolder: Workspaces
+		lineageTag: 84be89b6-54bf-4aa3-81ad-e9eeb8ba0668
+
+	measure '# Workspace Accesses (Group)' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(workspaces_scanned_users[GraphId]),
+			    workspaces_scanned_users[PrincipalType] = "Group"
+			)
+		formatString: 0
+		displayFolder: Workspaces
+		lineageTag: b78ba92b-ae7d-43f2-9ca4-b88b84246f2e
+
+	measure '# Delegated Tenant Settings Overrides Snapshots' = DISTINCTCOUNT(delegated_tenant_settings_overrides[TransferDateTime])
+		formatString: 0
+		displayFolder: Tenant Settings\Delegated Settings Overrides
+		lineageTag: 0a281414-9f3e-4db8-9349-4e6401ceb545
+
+	measure 'Enabled (Delegated)' =
+			
+			CALCULATE(
+			    COUNTROWS(delegated_tenant_settings_overrides),
+			    delegated_tenant_settings_overrides[enabled] = TRUE()
+			)
+		formatString: 0
+		displayFolder: Tenant Settings\Delegated Settings Overrides
+		lineageTag: 3743e541-5c6b-41a1-ac72-db3cf5615a23
+
+	measure 'Disabled (Delegated)' =
+			
+			CALCULATE(
+			    COUNTROWS(delegated_tenant_settings_overrides),
+			    delegated_tenant_settings_overrides[enabled] = FALSE()
+			)
+		formatString: 0
+		displayFolder: Tenant Settings\Delegated Settings Overrides
+		lineageTag: 334ab8fd-4d28-46e8-ba0a-951b56c2927a
+
+	measure '# Capacities with Current Tenant Setting Overrides' =
+			
+			VAR _maxDate = MAX(delegated_tenant_settings_overrides[TransferDateTime])
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(delegated_tenant_settings_overrides[CapacityId]),
+			    delegated_tenant_settings_overrides[TransferDateTime] = _maxDate,
+			    delegated_tenant_settings_overrides[enabled] = TRUE()
+			)
+		formatString: 0
+		displayFolder: Tenant Settings\Delegated Settings Overrides
+		lineageTag: b6737f0a-c226-4147-b745-9f0d069d4b69
+
+	measure 'FUAM Release' = "2025.1.1"
+		displayFolder: Meta
+		lineageTag: d6c20dd4-5e52-4c16-9f82-263d56af9dc6
+
+	column Value
+		isHidden
+		lineageTag: 6e177236-9abc-4961-ae93-da64da18826c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'New Calculated Table' = calculated
+		mode: import
+		source = {"metrics bucket"}
+

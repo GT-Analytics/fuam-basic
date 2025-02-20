@@ -1,0 +1,90 @@
+relationship 1c982872-7bcb-cbb5-f585-4924d0ba1076
+	crossFilteringBehavior: bothDirections
+	fromColumn: active_items.workspaceId
+	toColumn: workspaces.WorkspaceId
+
+relationship 2f195785-4d60-03ae-115e-81663202f887
+	fromColumn: activities.CreationDateKey
+	toColumn: calendar.DateKey
+
+relationship 1a902587-9130-2618-61f6-073868c38024
+	crossFilteringBehavior: bothDirections
+	fromColumn: capacity_refreshables.ItemId
+	toColumn: active_items.id
+
+relationship 11f6884d-abd5-23da-8fb6-20bcfa79ae8e
+	crossFilteringBehavior: bothDirections
+	fromColumn: workspaces.CapacityId
+	toColumn: capacities.CapacityId
+
+relationship b64c16bd-bc60-a494-2b7d-d16c5f0ae362
+	fromColumn: aggregated_activities_last_30days.CreationDateKey
+	toColumn: calendar.DateKey
+
+relationship 16a081f0-2f02-879c-c074-cf72d527b659
+	isActive: false
+	fromColumn: reports.SemanticModelId
+	toColumn: semantic_models.SemanticModelId
+
+relationship b73e3ab4-2cf0-48ff-15d8-5c365009c0c4
+	fromColumn: dataflows.WorkspaceId
+	toColumn: workspaces.WorkspaceId
+
+relationship 47f85925-bae1-6454-229c-a977e9f79165
+	fromColumn: workspaces_scanned_users.WorkspaceId
+	toColumn: workspaces.WorkspaceId
+
+relationship c3c4d158-c3a8-153d-7bac-3c3729e9d2d6
+	fromColumn: dashboards.WorkspaceId
+	toColumn: workspaces.WorkspaceId
+
+relationship 880392c3-b583-0c83-94ac-bbdee1ecd27f
+	fromColumn: reports.WorkspaceId
+	toColumn: workspaces.WorkspaceId
+
+relationship b1ad5f39-074c-285b-7e22-28b8ef322788
+	fromColumn: tenant_settings.TransferDate
+	toColumn: calendar.Date2Key
+
+relationship e8442f18-8da3-62f8-b828-15fd8003912b
+	crossFilteringBehavior: bothDirections
+	relyOnReferentialIntegrity
+	fromColumn: capacity_refreshable_times.ItemId
+	toColumn: capacity_refreshables.ItemId
+
+relationship 9efa5afc-29fc-fefa-0e75-274f35647e0b
+	crossFilteringBehavior: bothDirections
+	relyOnReferentialIntegrity
+	fromColumn: capacity_refreshable_days.ItemId
+	toColumn: capacity_refreshables.ItemId
+
+relationship a5df602a-2861-1b78-fce8-cc241fe904eb
+	relyOnReferentialIntegrity
+	fromColumn: capacity_refreshable_details.ItemId
+	toColumn: capacity_refreshables.ItemId
+
+relationship c35a8ffd-ba70-ec9f-36a0-343767ca7332
+	fromColumn: capacity_refreshable_summaries.ItemId
+	toColumn: capacity_refreshables.ItemId
+
+relationship f6af2a7f-1c78-c39c-4c3f-763b1521a981
+	crossFilteringBehavior: bothDirections
+	fromColumn: active_items.id
+	toColumn: semantic_models.SemanticModelId
+
+relationship 6bf126c0-ba81-e028-ecec-b9ea6b7f50e5
+	fromColumn: git_connections.workspaceId
+	toColumn: workspaces.WorkspaceId
+
+relationship e8534e33-9f6d-1b51-f261-28f118b7bc96
+	fromColumn: delegated_tenant_settings_overrides.CapacityId
+	toColumn: capacities.CapacityId
+
+relationship f42db25c-6646-490d-021e-1597d56535e1
+	fromColumn: capacities.region
+	toColumn: capacity_regions.FabricRegion
+
+relationship b449d7bd-2478-94e3-a59e-400cd0697980
+	fromColumn: capacity_refreshable_summaries.ConsideredStartDateKey
+	toColumn: calendar.DateKey
+
