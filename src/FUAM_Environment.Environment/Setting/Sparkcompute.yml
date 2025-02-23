@@ -1,4 +1,1 @@
-dynamic_executor_allocation:
-  enabled: true
-  min_executors: 1
 runtime_version: 1.3
