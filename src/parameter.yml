@@ -7,4 +7,10 @@ find_replace:
     "2b83c283-e62e-472d-913f-44709bd527af":
         FUAM Basic Automatic Deployment: fabric-connection-id-placeholder
         CICD Test: 644f217a-8761-4f19-b1b7-a40bfe0ec2af
-        PROD: 2b83c283-e62e-472d-913f-44709bd527af    
+        PROD: 2b83c283-e62e-472d-913f-44709bd527af
+    "18ea641f-9de7-40c1-849c-22bdda18f679":
+        FUAM Basic Automatic Deployment: fuam-lakehouse-id-placeholder
+    "903193ec-3ab2-8f50-49e6-2f1235511df7":
+        FUAM Basic Automatic Deployment: fuam-staging-lakehouse-id-placeholder
+    "b84b92c5-3765-ba34-4afc-992b59913614":
+        FUAM Basic Automatic Deployment: fuam-config-lakehouse-id-placeholder
