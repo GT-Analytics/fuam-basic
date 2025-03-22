@@ -1,0 +1,117 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "77e459e0-797c-aaa9-4613-73cdbf022f32",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "display_data": {
+              "value": {
+                "value": "@pipeline().parameters.display_data",
+                "type": "Expression"
+              },
+              "type": "bool"
+            }
+          },
+          "sessionTag": "fuam"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "01_Transfer_Delegated_Tenant_Settings_Overrides_Unit",
+        "dependsOn": [
+          {
+            "activity": "Get Delegated Tenant settings overrides",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "RestSource",
+            "requestMethod": "GET",
+            "paginationRules": {
+              "AbsoluteUrl": {
+                "value": "@string('$.continuationUri')",
+                "type": "Expression"
+              }
+            },
+            "httpRequestTimeout": "00:01:40",
+            "requestInterval": "00.00:00:00.010",
+            "datasetSettings": {
+              "type": "RestResource",
+              "typeProperties": {
+                "relativeUrl": "capacities/delegatedTenantSettingOverrides"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "906a63f5-f0c8-46f1-a817-240fea7a0373"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "JsonSink",
+            "formatSettings": {
+              "type": "JsonWriteSettings",
+              "filePattern": "arrayOfObjects"
+            },
+            "storeSettings": {
+              "type": "LakehouseWriteSettings"
+            },
+            "datasetSettings": {
+              "type": "Json",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation",
+                  "folderPath": "raw/delegated_tenant_settings_overrides",
+                  "fileName": "delegated_tenant_settings_overrides.json"
+                }
+              },
+              "schema": {},
+              "linkedService": {
+                "name": "FUAM_Lakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "95255b0e-9daf-86bc-4fb4-e116a8a9061e",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Get Delegated Tenant settings overrides",
+        "dependsOn": []
+      }
+    ],
+    "parameters": {
+      "display_data": {
+        "type": "bool",
+        "defaultValue": false
+      }
+    }
+  }
+}

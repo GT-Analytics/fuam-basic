@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "FUAM_Gateway_Monitoring_From_Files_SM"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5542ca36-eb1b-9420-473c-79f76a8853cd"
+  }
+}

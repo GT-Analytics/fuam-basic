@@ -1,0 +1,71 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "3f031862-479f-9621-4538-1e1463eb3d0a",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "has_tenant_domains": {
+              "value": {
+                "value": "@pipeline().parameters.has_tenant_domains",
+                "type": "Expression"
+              },
+              "type": "bool"
+            },
+            "extract_powerbi_artifacts_only": {
+              "value": {
+                "value": "@pipeline().parameters.extract_powerbi_artifacts_only",
+                "type": "Expression"
+              },
+              "type": "bool"
+            },
+            "display_data": {
+              "value": {
+                "value": "@pipeline().parameters.display_data",
+                "type": "Expression"
+              },
+              "type": "bool"
+            },
+            "nameOfKeyVault": {
+              "value": {
+                "value": "@pipeline().parameters.keyvault",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          },
+          "sessionTag": "fuam"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "01_Transfer_Incremental_Inventory_Unit",
+        "dependsOn": []
+      }
+    ],
+    "parameters": {
+      "has_tenant_domains": {
+        "type": "bool",
+        "defaultValue": false
+      },
+      "extract_powerbi_artifacts_only": {
+        "type": "bool",
+        "defaultValue": true
+      },
+      "display_data": {
+        "type": "bool",
+        "defaultValue": false
+      },
+      "keyvault": {
+        "type": "string",
+        "defaultValue": "fuamkv"
+      }
+    }
+  }
+}

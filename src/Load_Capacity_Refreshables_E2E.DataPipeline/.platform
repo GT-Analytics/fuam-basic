@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "Load_Capacity_Refreshables_E2E"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f61410d5-1e77-97bf-4238-c56e03f6dfc7"
+  }
+}
