@@ -1,6 +1,6 @@
 # Fabric Unified Admin Monitoring (FUAM)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_cover_main.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/fuam_cover_main.png)
 
 ## Introduction
 
@@ -15,7 +15,7 @@ Today monitoring for Fabric can be done through different reports, apps and tool
 
 FUAM has the goal to provide a more holistic view on top of the various information, which can be extracted from Fabric, allowing it's users to analyze at a very high level, but also to deep dive into specific artifacts for a more fine granular data analysis.
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_monitoring_map_cover.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/fuam_monitoring_map_cover.png)
 
 FUAM is completely build with Fabric capabilities with Pipelines and Notebooks as the main tool to extract and transform data. All of the data is stored in it's raw format, but also in Delta Parquet, enabling the user to directly use it through Power BI Direct Lake or the Lakehouse SQL Endpoint via SQL.
 FUAM comes with a set of standard report enabling a quick overview on the data, but it's intended to give the users all tool to customize or build the own reports on top of the data model. Through the openness of Fabric it's of course also possible to combine it with your own data enabling you to do the analysis you wish.
@@ -47,15 +47,15 @@ We have built the component in a **modular structure**, which helps you to exten
 
 The **data ingestion** logic is orchastrated and parametizable, which allows to use the main orchestration pipeline for initial and incremental data loads.
 **FUAM Lakehouse** is one of the core component in the architecture. All the data is transformed and persisted in a way, which open amazing capabilities analyzing the collected data in a semantic model with DirectLake mode.
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/FUAM_basic_architecture.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/FUAM_basic_architecture.png)
 
 ------------------------------------
 
 # FUAM Basic Deployment
-### [Click here to **upgrade** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Upgrading-FUAM)
- 
-### [Click here to **deploy** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Initial-Deployment)
 
+### [Click here to **deploy** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Initial-Deployment-via-Notebook)
+
+### [Click here to **upgrade** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Upgrading-via-Notebook)
 
 ------------------------------------
 
@@ -63,46 +63,46 @@ The **data ingestion** logic is orchastrated and parametizable, which allows to 
 
 FUAM comes with a set of standard report enabling a quick overview on the data, but it's intended to give the users all tool to customize or build the own reports on top of the data model.
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_reporting_cover.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/fuam_basic_reporting_cover.png)
 
 #### FUAM Reporting | Tenant Overview | Screenshots
 Report name in Workspace: **FUAM_Basic_Overview_Report** 
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_1.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_1.png)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_2.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_2.png)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_3.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_3.png)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_4.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_4.png)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_5.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_5.png)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_6.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_6.png)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_7.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_7.png)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_8.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_8.png)
 
 #### FUAM Reporting | Capacity Refreshables | Screenshots
 Report name in Workspace: **FUAM_Capacity_Refreshables_Report** 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_9.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_9.png)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_10.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_10.png)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_11.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_11.png)
 
 
 #### FUAM Reporting | Activities | Screenshots
 Report name in Workspace: **FUAM_Activities_Report** 
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_12.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_12.png)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_13.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_13.png)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_14.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_14.png)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_15.png)
+![image](https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/report_screenshot_15.png)
 
 --------------------------
 
@@ -125,5 +125,5 @@ Report name in Workspace: **FUAM_Activities_Report**
 
 ### Logo
 <p align="center">
-  <img height="165" src="https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_text_logo.png">
+  <img height="165" src="https://github.com/GT-Analytics/fuam-basic/blob/main/media/assets/fuam_text_logo.png">
 </p>
