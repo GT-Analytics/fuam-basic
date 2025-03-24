@@ -1,0 +1,154 @@
+{
+    "manual": [
+        {
+            "LogicalId": "ee9e7fa6-49a3-4561-afc8-41b001d5bf5b",
+            "Item": "workspace_id"
+        },
+        {
+            "LogicalId": "906a63f5-f0c8-46f1-a817-240fea7a0373",
+            "Item": "fuam_fabric_conn_id"
+        },
+        {
+            "LogicalId": "5881ae05-6fa4-4f9f-b3b0-13e8e6e9ea48",
+            "Item": "fuam_pbi_conn_id"
+        },
+        {
+            "LogicalId": "a8a9061e-e116-4fb4-86bc-9daf95255b0e",
+            "Item": "fuam_lakehouse_id"
+        }
+    ],
+    "automatic": [
+        {
+            "LogicalId": "a5186173-08de-a2ba-48a7-0817d1915f33",
+            "Item": "FUAM_Config_Lakehouse.Lakehouse"
+        },
+        {
+            "LogicalId": "95255b0e-9daf-86bc-4fb4-e116a8a9061e",
+            "Item": "FUAM_Lakehouse.Lakehouse"
+        },
+        {
+            "LogicalId": "d91de3d1-c7d2-9525-4355-089824116b3a",
+            "Item": "FUAM_Staging_Lakehouse.Lakehouse"
+        },
+        {
+            "LogicalId": "69aa752f-4f04-8a46-4949-97a0f0d1b5fe",
+            "Item": "01_Transfer_Active_Items_Unit.Notebook"
+        },
+        {
+            "LogicalId": "63f22d9d-deec-8889-401b-47def17d3873",
+            "Item": "01_Transfer_Capacities_Unit.Notebook"
+        },
+        {
+            "LogicalId": "e57f07b3-3482-8111-4fd3-ebd93d39927e",
+            "Item": "01_Transfer_Capacity_Refreshables_Unit.Notebook"
+        },
+        {
+            "LogicalId": "77e459e0-797c-aaa9-4613-73cdbf022f32",
+            "Item": "01_Transfer_Delegated_Tenant_Settings_Overrides_Unit.Notebook"
+        },
+        {
+            "LogicalId": "e3f6d045-9869-bc1a-4a1f-ff95507b5517",
+            "Item": "01_Transfer_Git_Connections_Unit.Notebook"
+        },
+        {
+            "LogicalId": "3f031862-479f-9621-4538-1e1463eb3d0a",
+            "Item": "01_Transfer_Incremental_Inventory_Unit.Notebook"
+        },
+        {
+            "LogicalId": "86866c72-2260-b3ea-43ee-a9e8cc17e391",
+            "Item": "01_Transfer_Tenant_Admin_Settings_Unit.Notebook"
+        },
+        {
+            "LogicalId": "6c3f0e71-5333-a2f8-4fff-e2e8c4d095c8",
+            "Item": "02_Transfer_Activities_Unit.Notebook"
+        },
+        {
+            "LogicalId": "db943c80-afd2-a37f-4ca8-97a3cdb82759",
+            "Item": "02_Transfer_Workspaces_Unit.Notebook"
+        },
+        {
+            "LogicalId": "1b41f34b-eaed-a1c3-4a3e-9f2d1b4fca51",
+            "Item": "03_Aggregate_Activities_Unit.Notebook"
+        },
+        {
+            "LogicalId": "7fba2d7b-2049-8f67-4fd3-42b1ae21d4b8",
+            "Item": "Deploy_FUAM_Basic_Automatic.Notebook"
+        },
+        {
+            "LogicalId": "7ec43cb6-f433-a3a5-4b45-311a93c12697",
+            "Item": "Generate_Calendar_Table.Notebook"
+        },
+        {
+            "LogicalId": "0d1bcf88-0a2d-bb2d-4d69-5f745e82e04c",
+            "Item": "Load_Activities_E2E.DataPipeline"
+        },
+        {
+            "LogicalId": "ea136409-8f24-a57f-4bac-cdbd5bed1cf7",
+            "Item": "Load_Capacities_E2E.DataPipeline"
+        },
+        {
+            "LogicalId": "f61410d5-1e77-97bf-4238-c56e03f6dfc7",
+            "Item": "Load_Capacity_Refreshables_E2E.DataPipeline"
+        },
+        {
+            "LogicalId": "c9b7f8b1-8a82-a624-4806-8515e60c182f",
+            "Item": "Load_Delegated_Tenant_Settings_Overrides_E2E.DataPipeline"
+        },
+        {
+            "LogicalId": "da2e9c28-31e3-9034-414d-fb81838a9827",
+            "Item": "Load_Git_Connections_E2E.DataPipeline"
+        },
+        {
+            "LogicalId": "47c31bb4-b182-9cef-4c65-d78c745ec835",
+            "Item": "Load_Inventory_E2E.DataPipeline"
+        },
+        {
+            "LogicalId": "28acffd5-bec7-ae41-4f38-8a30d566a239",
+            "Item": "Load_Items_E2E.DataPipeline"
+        },
+        {
+            "LogicalId": "f4ea22f1-e325-b981-4fd7-6010ff02e17e",
+            "Item": "Load_PBI_Workspaces_E2E.DataPipeline"
+        },
+        {
+            "LogicalId": "e0ab3748-5d06-8c76-4376-93711fd09812",
+            "Item": "Load_Tenant_Settings_E2E.DataPipeline"
+        },
+        {
+            "LogicalId": "af20ddca-7437-9722-4e17-6a84abe736c8",
+            "Item": "FUAM_Basic_PBI_Overview_SM.SemanticModel"
+        },
+        {
+            "LogicalId": "5542ca36-eb1b-9420-473c-79f76a8853cd",
+            "Item": "FUAM_Gateway_Monitoring_From_Files_SM.SemanticModel"
+        },
+        {
+            "LogicalId": "b517c369-876c-8e15-49c0-efdbefdc099b",
+            "Item": "FUAM_TMMDA_SM.SemanticModel"
+        },
+        {
+            "LogicalId": "e4d39039-2a38-8cf9-46b9-11da1c120e17",
+            "Item": "FUAM_Activities_Report.Report"
+        },
+        {
+            "LogicalId": "3ce7d57d-5e10-8367-400f-444f4aa51f4d",
+            "Item": "FUAM_Basic_Overview_Report.Report"
+        },
+        {
+            "LogicalId": "77bd9a46-fb49-95fb-4392-401c060f7e60",
+            "Item": "FUAM_Capacity_Refreshables_Report.Report"
+        },
+        {
+            "LogicalId": "eafb7bc5-1ad6-84cd-4c3e-83d3feaad6f4",
+            "Item": "FUAM_Gateway_Monitoring_From_Files_Report.Report"
+        },
+        {
+            "LogicalId": "7b47313b-1842-9a00-4c08-4bda24ec863e",
+            "Item": "FUAM_TMMDA_Report.Report"
+        },
+        {
+            "LogicalId": "3b4d8086-b524-8131-4a5e-1f0fcff3a091",
+            "Item": "Load_Basic_Package_Sequentially_E2E.DataPipeline"
+        }
+    ]
+}
