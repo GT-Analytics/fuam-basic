@@ -25,7 +25,7 @@ FUAM comes with a set of standard report enabling a quick overview on the data, 
 
 There are two different versions of FUAM available:
 - **FUAM Basic:** Provides all the information, which can be extracted through official APIs, to make most of your tenants data available. This is the version available through this github
-- **FUAM Plus:** Provides additional information, like Longterm Capacity Metrics data, which needs to be extracted through other means. Therefore FUAM Plus needs a certain amount of support for deploying and maintaining the solution. If you are interessted in a more deep dive on FUAM Plus, please contact us directly.
+- **FUAM Plus:** Provides additional information, like long-term Capacity Metrics data, which needs to be extracted through other means. Therefore FUAM Plus needs a certain amount of support for deploying and maintaining the solution. If you are interessted in a more deep dive on FUAM Plus, please contact us directly.
 
 
 ## FUAM Basic Content
