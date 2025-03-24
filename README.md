@@ -1,6 +1,6 @@
 # Fabric Unified Admin Monitoring (FUAM)
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_cover_main.png)
+![image](./media/general/fuam_cover_main.png)
 
 ## Introduction
 
@@ -15,7 +15,9 @@ Today monitoring for Fabric can be done through different reports, apps and tool
 
 FUAM has the goal to provide a more holistic view on top of the various information, which can be extracted from Fabric, allowing it's users to analyze at a very high level, but also to deep dive into specific artifacts for a more fine granular data analysis.
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_monitoring_map_cover.png)
+[Watch FUAM Introduction video on Youtube](https://www.youtube.com/watch?v=Ai71Xzr_2Ds)
+
+![image](./media/general/fuam_monitoring_map_cover.png)
 
 FUAM is completely build with Fabric capabilities with Pipelines and Notebooks as the main tool to extract and transform data. All of the data is stored in it's raw format, but also in Delta Parquet, enabling the user to directly use it through Power BI Direct Lake or the Lakehouse SQL Endpoint via SQL.
 FUAM comes with a set of standard report enabling a quick overview on the data, but it's intended to give the users all tool to customize or build the own reports on top of the data model. Through the openness of Fabric it's of course also possible to combine it with your own data enabling you to do the analysis you wish.
@@ -25,7 +27,7 @@ FUAM comes with a set of standard report enabling a quick overview on the data, 
 
 There are two different versions of FUAM available:
 - **FUAM Basic:** Provides all the information, which can be extracted through official APIs, to make most of your tenants data available. This is the version available through this github
-- **FUAM Plus:** Provides additional information, like Longterm Capacity Metrics data, which needs to be extracted through other means. Therefore FUAM Plus needs a certain amount of support for deploying and maintaining the solution. If you are interessted in a more deep dive on FUAM Plus, please contact us directly.
+- **FUAM Plus:** Provides additional information, like long-term Capacity Metrics data, which needs to be extracted through other means. Therefore FUAM Plus needs a certain amount of support for deploying and maintaining the solution. If you are interessted in a more deep dive on FUAM Plus, please contact us directly.
 
 
 ## FUAM Basic Content
@@ -47,72 +49,34 @@ We have built the component in a **modular structure**, which helps you to exten
 
 The **data ingestion** logic is orchastrated and parametizable, which allows to use the main orchestration pipeline for initial and incremental data loads.
 **FUAM Lakehouse** is one of the core component in the architecture. All the data is transformed and persisted in a way, which open amazing capabilities analyzing the collected data in a semantic model with DirectLake mode.
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/FUAM_basic_architecture.png)
+![image](./media/general/FUAM_basic_architecture.png)
+
+Architectural documentation can be found on our Wiki page: [FUAM Architecture](https://github.com/GT-Analytics/fuam-basic/wiki/Architecture)
 
 ------------------------------------
 
 # FUAM Basic Deployment
-### [Click here to **upgrade** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Upgrading-FUAM)
- 
-### [Click here to **deploy** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Initial-Deployment)
 
+Are you ready to try FUAM out? We have prepared two step-by-step documentations, which support you to deploy FUAM in your workspace on your tenant.
+
+### [Click here to **deploy** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Initial-Deployment-via-Notebook)
+
+### [Click here to **upgrade** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Upgrading-via-Notebook)
 
 ------------------------------------
 
-### FUAM Reporting
+# Other Documentation
 
-FUAM comes with a set of standard report enabling a quick overview on the data, but it's intended to give the users all tool to customize or build the own reports on top of the data model.
+We have collected all insights, documentation and helpful links in our wiki.
 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_basic_reporting_cover.png)
-
-#### FUAM Reporting | Tenant Overview | Screenshots
-Report name in Workspace: **FUAM_Basic_Overview_Report** 
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_1.png)
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_2.png)
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_3.png)
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_4.png)
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_5.png)
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_6.png)
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_7.png)
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_8.png)
-
-#### FUAM Reporting | Capacity Refreshables | Screenshots
-Report name in Workspace: **FUAM_Capacity_Refreshables_Report** 
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_9.png)
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_10.png)
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_11.png)
-
-
-#### FUAM Reporting | Activities | Screenshots
-Report name in Workspace: **FUAM_Activities_Report** 
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_12.png)
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_13.png)
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_14.png)
-
-![image](https://github.com/GT-Analytics/fuam-basic/blob/main/assets/report_screenshot_15.png)
-
---------------------------
-
-## Lakehouse data lineage
-
-[Go to Wiki](https://github.com/GT-Analytics/fuam-basic/wiki/Architecture:-Lakehouse)
+[Go to FUAM wiki](https://github.com/GT-Analytics/fuam-basic/wiki)
 
 ## Remarks & Limitations
 
-[Read Remarks on Wiki](https://github.com/GT-Analytics/fuam-basic/wiki/Remarks)
+There are couple of important information, which you should know.
+Please visit for more details the
+[Read Remarks on wiki](https://github.com/GT-Analytics/fuam-basic/wiki/Remarks-to-FUAM)
+
 
 ## Important
 
@@ -123,7 +87,51 @@ Report name in Workspace: **FUAM_Activities_Report**
 - Please test the solution on a non-production Fabric SKU first without impacting other workloads on your tenant.
 
 
+------------------------------------
+
+# FUAM Reporting | Screenshots
+
+FUAM comes with a set of standard report enabling a quick overview on the data, but it's intended to give the users all tool to customize or build the own reports on top of the data model.
+
+![image](./media/general/fuam_basic_reporting_cover.png)
+
+#### FUAM Reporting | Tenant Overview | Screenshots
+Report name in Workspace: **FUAM_Basic_Overview_Report** 
+
+![image](./media/screenshots/report_screenshot_1.png)
+
+![image](./media/screenshots/report_screenshot_2.png)
+
+![image](./media/screenshots/report_screenshot_3.png)
+
+![image](./media/screenshots/report_screenshot_4.png)
+
+![image](./media/screenshots/report_screenshot_5.png)
+
+![image](./media/screenshots/report_screenshot_6.png)
+
+![image](./media/screenshots/report_screenshot_7.png)
+
+![image](./media/screenshots/report_screenshot_8.png)
+
+![image](./media/screenshots/report_screenshot_9.png)
+
+![image](./media/screenshots/report_screenshot_10.png)
+
+![image](./media/screenshots/report_screenshot_11.png)
+
+![image](./media/screenshots/report_screenshot_12.png)
+
+![image](./media/screenshots/report_screenshot_13.png)
+
+![image](./media/screenshots/report_screenshot_14.png)
+
+![image](./media/screenshots/report_screenshot_15.png)
+
+--------------------------
+
+
 ### Logo
 <p align="center">
-  <img height="165" src="https://github.com/GT-Analytics/fuam-basic/blob/main/assets/fuam_text_logo.png">
+  <img height="165" src="./media/general/fuam_text_logo.png">
 </p>
