@@ -15,6 +15,8 @@ Today monitoring for Fabric can be done through different reports, apps and tool
 
 FUAM has the goal to provide a more holistic view on top of the various information, which can be extracted from Fabric, allowing it's users to analyze at a very high level, but also to deep dive into specific artifacts for a more fine granular data analysis.
 
+[Watch FUAM Introduction video on Youtube](https://www.youtube.com/watch?v=Ai71Xzr_2Ds)
+
 ![image](./media/general/fuam_monitoring_map_cover.png)
 
 FUAM is completely build with Fabric capabilities with Pipelines and Notebooks as the main tool to extract and transform data. All of the data is stored in it's raw format, but also in Delta Parquet, enabling the user to directly use it through Power BI Direct Lake or the Lakehouse SQL Endpoint via SQL.
