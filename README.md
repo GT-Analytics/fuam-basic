@@ -2,7 +2,7 @@
 
 ```diff
 - FUAM is now part of the Fabric Toolbox and will be actively developed there.
-- As part of this step we also merged both version
+- As part of this step we also merged both version.
 - The complete FUAM solution available as an open-source solution. 
 ```
 **If you want to get more information or deploy the latest version, head over to Fabric toolbox:**
