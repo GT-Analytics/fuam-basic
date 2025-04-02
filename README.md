@@ -1,5 +1,22 @@
 # Fabric Unified Admin Monitoring (FUAM)
 
+```diff
+- FUAM is now part of the Fabric Toolbox and will be actively developed there.
+- As part of this step we also merged both version
+- The complete FUAM solution available as an open-source solution. 
+```
+**If you want to get more information or deploy the latest version, head over to Fabric toolbox:**
+
+### [Explore FUAM in fabric-toolbox](https://github.com/microsoft/fabric-toolbox/tree/main/monitoring/fabric-unified-admin-monitoring)
+
+
+
+-----------------------
+-----------------------
+-----------------------
+
+
+
 ![image](./media/general/fuam_cover_main.png)
 
 ## Introduction
@@ -59,9 +76,9 @@ Architectural documentation can be found on our Wiki page: [FUAM Architecture](h
 
 Are you ready to try FUAM out? We have prepared two step-by-step documentations, which support you to deploy FUAM in your workspace on your tenant.
 
-### [Click here to **deploy** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Initial-Deployment-via-Notebook)
+[Click here to **deploy** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Initial-Deployment-via-Notebook)
 
-### [Click here to **upgrade** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Upgrading-via-Notebook)
+[Click here to **upgrade** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Upgrading-via-Notebook)
 
 ------------------------------------
 
