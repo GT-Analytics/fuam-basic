@@ -19,6 +19,9 @@
 
 ![image](./media/general/fuam_cover_main.png)
 
+> [!CAUTION]  
+> The FUAM solution accelerator is not an official Microsoft product! It is a solution accelerator, which can help you implement a monitoring solution within Fabric. As such there is no offical support available and there is a risk that things might break.
+
 ## Introduction
 
 Fabric Unfied Admin Monitoring (short: FUAM) is a solution to enable a holistic monitoring on top of Power BI and Fabric. 
