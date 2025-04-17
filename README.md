@@ -40,13 +40,6 @@ FUAM is completely build with Fabric capabilities with Pipelines and Notebooks a
 FUAM comes with a set of standard report enabling a quick overview on the data, but it's intended to give the users all tool to customize or build the own reports on top of the data model. Through the openness of Fabric it's of course also possible to combine it with your own data enabling you to do the analysis you wish.
 
 
-## Versions
-
-There are two different versions of FUAM available:
-- **FUAM Basic:** Provides all the information, which can be extracted through official APIs, to make most of your tenants data available. This is the version available through this github
-- **FUAM Plus:** Provides additional information, like long-term Capacity Metrics data, which needs to be extracted through other means. Therefore FUAM Plus needs a certain amount of support for deploying and maintaining the solution. If you are interessted in a more deep dive on FUAM Plus, please contact us directly.
-
-
 ## FUAM Basic Content
 FUAM Basic extracts the following data from the tenant:
 - Tenant Settings
