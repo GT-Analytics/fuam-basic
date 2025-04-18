@@ -74,7 +74,7 @@ Are you ready to try FUAM out? We have prepared two step-by-step documentations,
 
 [Click here to **deploy** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Initial-Deployment-via-Notebook)
 
-[Click here to **upgrade** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Upgrading-via-Notebook)
+[Click here to **update** FUAM Basic](https://github.com/GT-Analytics/fuam-basic/wiki/Lifecycle:-Upgrading-via-Notebook)
 
 ------------------------------------
 
